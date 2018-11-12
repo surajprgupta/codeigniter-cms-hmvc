@@ -55,6 +55,35 @@
  */
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
+/**
+ * debugging function
+ *
+ * @param $var
+ * @param int $i
+ */
+function p($var, $i = 1, $disable_kint = 0, $trace = 0)
+{
+    if(class_exists('Kint') && function_exists('d') && $disable_kint == 0) {
+        if ($trace === 1) {
+            Kint::trace();
+        }
+
+        if ($i === 1) {
+            ddd($var);
+        } else {
+            d($var);
+        }
+    } else {
+        echo "<pre>";
+        print_r($var);
+        echo "</pre>";
+
+        if ($i === 1) {
+            die();
+        }
+    }
+}
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING

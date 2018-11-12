@@ -1,0 +1,21 @@
+{
+  "name": "codeigniter-with-modules-basic-structure",
+  "homepage": "https://github.com/surajprgupta/codeigniter-with-modules-basic-structure",
+  "authors": [
+    "surajgupta <suraj.gupta.489@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gentelella": "^1.3.0"
+  }
+}
